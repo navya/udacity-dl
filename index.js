@@ -19,6 +19,17 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+
+/* Check for the course */
+var course = '';
+if (process.argv[2]) {
+    course = process.argv[2].toLowerCase();
+    console.log('Downloading course content for ' + course);
+} else {
+    console.log('Course Number not providing, exiting');
+    process.exit(1);
+}
+
 var request = require('request'),
     $       = require('cheerio');
 
@@ -41,6 +52,5 @@ function parse(err, resp, html) {
     });
 }
 
-var course = 'st095';
 var domain = 'https://www.udacity.com/wiki/' + course + '/downloads';
 request(domain, parse);
