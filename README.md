@@ -18,3 +18,8 @@ node index.js st101 | xargs -n 1 -I link -exec wget link \;
 
 - Isn't shell magical?
 
+
+## TODO
+
+- Antigen compatibility
+- Interactive
