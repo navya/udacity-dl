@@ -19,7 +19,6 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-
 /* Check for the course */
 var course = '';
 if (process.argv[2]) {
@@ -35,7 +34,7 @@ var request = require('request'),
 
 function parse(err, resp, html) {
     if (err) {
-        console.log('Error');
+        console.log(err);
     }
 
     var zipURLS = [];
@@ -47,7 +46,7 @@ function parse(err, resp, html) {
         }
     });
 
-    zipURLS.map(function(value, index) {
+    zipURLS.map(function(value) {
         console.log(value);
     });
 }
