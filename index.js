@@ -20,17 +20,26 @@
  */
 
 /* Check for the course */
+var fs = require('fs');
+var configObject = JSON.parse(fs.readFileSync('./package.json'));
+
 var course = '';
-if (process.argv[2]) {
+if (process.argv[2] === '-v' || process.argv[2] === '--version' || process.argv[2] === 'version') {
+    console.log(configObject.version);
+    process.exit(0);
+} else if (/\w+\d+/.test(process.argv[2])){
     course = process.argv[2].toLowerCase();
     console.log('Generating URL list for: ' + course);
 } else {
-    console.log('Course Number missing, exiting');
-    process.exit(1);
+    console.log('\nUSAGE: udacity-dl <course-no>');
+    console.log('\nCOMMAND:');
+    console.log('\n\thelp\t\t\tShow this help text');
+    console.log('\tversion\t\t\tShow version of script');
+    process.exit(0);
 }
 
 var request = require('request'),
-    $       = require('cheerio');
+$       = require('cheerio');
 
 function parse(err, resp, html) {
     if (err) {
