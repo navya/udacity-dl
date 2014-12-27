@@ -1,5 +1,5 @@
 # udacity-dl
-A simple script to download course contents for a udacity course
+A simple script to list downloadable content for a udacity course
 
 ## Usage
 
@@ -9,14 +9,13 @@ A simple script to download course contents for a udacity course
 node index.js <course_no>
 ```
 
-- The above doesn't do much and just lists all the associated files. 
-  You can pipe on to download the files:
+- So, what can we do with a list of URLs? Why, download them!
 
 ```bash
 node index.js st101 | xargs -n 1 -I link -exec wget link \;
 ```
 
-- Isn't shell magical?
+- Shell Magic<sup>TM</sup>
 
 
 ## TODO

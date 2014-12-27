@@ -23,9 +23,9 @@
 var course = '';
 if (process.argv[2]) {
     course = process.argv[2].toLowerCase();
-    console.log('Downloading course content for ' + course);
+    console.log('Generating URL list for: ' + course);
 } else {
-    console.log('Course Number not providing, exiting');
+    console.log('Course Number missing, exiting');
     process.exit(1);
 }
 
