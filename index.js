@@ -21,7 +21,8 @@
 
 /* Check for the course */
 var fs = require('fs');
-var configObject = JSON.parse(fs.readFileSync('./package.json'));
+var path = require('path');
+var configObject = JSON.parse(fs.readFileSync(path.join(__dirname, 'package.json')));
 
 var course = '';
 if (process.argv[2] === '-v' || process.argv[2] === '--version' || process.argv[2] === 'version') {
