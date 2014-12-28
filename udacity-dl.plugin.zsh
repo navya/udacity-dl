@@ -1,2 +1,3 @@
 # This script sets up an alias to the script
-alias udacity-dl="node ${PWD}/index.js"
+DIR=$(dirname "$0")
+alias udacity-dl="node ${DIR}/index.js"
