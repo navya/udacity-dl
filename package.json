@@ -19,5 +19,9 @@
   "preferGlobal": "true",
   "bin": {
       "udacity-dl": "index.js"
+  },
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/navya/udacity-dl"
   }
 }
