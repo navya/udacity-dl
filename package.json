@@ -15,5 +15,9 @@
   "dependencies": {
     "cheerio": "^0.18.0",
     "request": "^2.48.0"
+  },
+  "preferGlobal": "true",
+  "bin": {
+      "udacity-dl": "index.js"
   }
 }

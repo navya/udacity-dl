@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /*
  * Copyright (c) 2014 Srijan R Shetty <srijan.shetty+code@gmail.com>
  *
