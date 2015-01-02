@@ -1,6 +1,6 @@
 {
   "name": "udacity-dl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Udacity Dowloader",
   "main": "index.js",
   "scripts": {

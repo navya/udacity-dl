@@ -6,7 +6,7 @@ A simple script to list downloadable content for a udacity course
 ### Antigen
 
 ```shell
-antigen bundle 'navya/udacity-dl'
+npm install -g udacity-dl
 ```
 
 ## Usage
@@ -14,13 +14,13 @@ antigen bundle 'navya/udacity-dl'
 - The script is invoked by providing a course number
 
 ```bash
-node index.js <course_no>
+udacity-dl <course_no>
 ```
 
 - So, what can we do with a list of URLs? Why, download them!
 
 ```bash
-node index.js st101 | xargs -n 1 -I link -exec wget link \;
+udacity-dl st101 | xargs -n 1 -I link -exec wget link \;
 ```
 
 - Shell Magic<sup>TM</sup>
